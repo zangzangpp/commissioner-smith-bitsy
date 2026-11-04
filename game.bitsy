@@ -1,0 +1,1284 @@
+"""
+Commissioner Smith vs Congress
+100 chairs. $2000. Save public money.
+Move: arrows / WASD. Read: bump objects.
+Advance: Space. Important choices: bump twice.
+All people, institutions and events are fictional.
+"""
+
+# BITSY VERSION 8.15
+
+! VER_MAJ 8
+! VER_MIN 15
+! ROOM_FORMAT 1
+! DLG_COMPAT 0
+! TXT_MODE 0
+
+DEFAULT_FONT ascii_small
+TEXT_DIRECTION LTR
+
+PAL 0
+20,31,46
+73,111,139
+238,224,188
+NAME Office
+
+PAL 1
+25,36,39
+78,118,114
+245,223,161
+NAME Corridor
+
+PAL 2
+43,28,23
+151,103,53
+255,224,147
+NAME Contractor
+
+PAL 3
+43,24,37
+132,64,86
+247,215,162
+NAME District
+
+PAL 4
+16,40,45
+58,118,126
+232,225,174
+NAME Training
+
+PAL 5
+30,22,46
+102,74,135
+241,207,164
+NAME Private
+
+PAL 6
+30,35,41
+102,116,127
+222,222,194
+NAME Records
+
+PAL 7
+39,22,24
+137,65,54
+249,218,150
+NAME Hearing
+
+ROOM 0
+1,1,1,1,1,1,1,1,6,1,1,1,1,1,1,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,4,0,0,0,2,0,0,0,2,0,0,4,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,0,0,2,0,0,0,2,0,0,0,2,0,0,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,2,0,0,0,3,3,3,3,3,0,0,0,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,0,0,2,0,0,0,2,0,0,0,2,0,0,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,2,0,0,0,8,8,8,0,2,0,0,0,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,4,0,2,0,0,0,0,0,0,0,2,4,0,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,2,0,0,0,2,0,0,0,2,0,0,0,2,1
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+NAME Smith Office
+PAL 0
+ITM 0 8,9
+EXT 8,0 1 8,13 DLG gate_brief
+
+ROOM 1
+1,1,1,1,1,1,1,1,6,1,1,1,1,1,1,1
+1,0,0,2,0,0,0,7,7,0,0,2,0,0,0,1
+1,0,2,4,0,0,2,7,7,0,2,0,4,0,2,1
+1,2,0,0,0,2,0,7,7,2,0,0,0,2,0,1
+6,0,0,0,2,0,0,7,7,0,0,0,2,0,0,6
+1,0,0,2,8,0,0,7,7,0,0,8,0,0,0,1
+1,0,2,0,0,0,2,7,7,0,2,0,0,0,2,1
+1,2,0,0,0,2,0,0,7,2,0,0,0,2,0,1
+1,0,0,0,2,0,0,7,7,0,0,0,2,0,0,1
+1,0,0,2,0,0,0,7,7,0,0,2,0,0,0,1
+6,0,2,0,8,0,2,7,7,0,2,8,0,0,2,6
+1,2,0,0,0,2,0,7,7,2,0,0,0,2,0,1
+1,0,0,0,2,0,0,7,7,0,0,0,2,0,0,1
+1,0,0,4,0,0,0,7,7,0,0,2,4,0,0,1
+1,0,2,0,0,0,2,7,7,0,2,0,0,0,2,1
+1,1,1,1,1,1,1,1,6,1,1,1,1,1,1,1
+NAME Capitol Hall
+PAL 1
+EXT 8,15 0 8,1
+EXT 0,4 2 13,8
+EXT 15,4 3 2,8 DLG gate_quote
+EXT 15,10 4 2,8 DLG gate_quote
+EXT 0,10 6 13,8 DLG gate_quote
+EXT 8,0 7 8,14 DLG gate_quote
+
+ROOM 2
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,4,0,0,0,2,0,0,0,2,0,0,4,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,0,0,2,0,0,0,2,0,0,0,2,0,0,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,2,0,0,0,3,3,3,3,3,0,0,0,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,0,0,2,0,0,0,2,0,0,0,2,0,0,6
+1,0,0,2,0,0,0,2,0,0,0,0,0,0,0,1
+1,0,2,0,0,0,8,8,8,0,2,0,0,0,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,4,0,2,0,0,0,2,0,0,0,2,4,0,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,2,0,0,0,2,0,0,0,2,0,0,0,2,1
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+NAME Vellum Contracting
+PAL 2
+ITM 1 5,12
+EXT 15,8 1 1,4
+
+ROOM 3
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,4,0,0,0,2,0,0,0,2,0,0,4,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,0,0,2,0,0,0,2,0,0,0,2,0,0,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,2,0,0,0,3,3,3,3,3,0,0,0,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+6,0,0,0,2,0,0,0,2,0,0,0,2,0,0,1
+1,0,0,2,0,0,0,2,0,0,0,0,0,0,0,1
+1,0,2,0,0,0,8,8,8,0,2,0,0,0,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,4,0,2,0,0,0,2,0,0,0,2,4,0,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,2,0,0,0,2,0,0,0,2,0,0,0,2,1
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+NAME Doran District Office
+PAL 3
+EXT 0,8 1 14,4
+
+ROOM 4
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,4,0,0,0,2,0,0,0,2,0,0,4,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,0,0,2,0,0,0,2,0,0,0,2,0,0,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,2,0,0,0,3,3,3,3,3,0,0,0,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+6,0,0,0,2,0,0,0,2,0,0,0,2,0,0,1
+1,0,0,2,0,0,0,2,0,0,0,0,0,0,0,1
+1,0,2,0,0,0,8,8,8,0,2,0,0,0,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,4,0,2,0,0,0,2,0,0,0,2,4,0,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,2,0,0,0,2,0,0,0,2,0,0,0,2,1
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+NAME Bell Training Office
+PAL 4
+EXT 0,8 1 14,10
+
+ROOM 5
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,4,0,0,0,2,0,0,0,2,0,0,4,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,0,0,8,8,0,0,2,0,0,8,8,0,0,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,2,0,0,0,3,3,3,3,3,0,0,0,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,0,0,2,0,0,0,2,0,0,0,2,0,0,1
+1,0,0,2,0,0,0,2,0,0,0,0,0,0,0,1
+1,0,2,0,0,0,2,0,0,0,2,0,0,0,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,4,7,7,7,7,7,7,7,7,7,7,4,0,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,2,0,0,0,2,0,0,0,2,0,0,0,2,1
+1,1,1,1,1,1,1,1,6,1,1,1,1,1,1,1
+NAME Private Lounge
+PAL 5
+EXT 8,15 6 8,2
+
+ROOM 6
+1,1,1,1,1,1,1,1,6,1,1,1,1,1,1,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,4,0,0,0,2,0,0,0,2,0,0,4,2,1
+1,2,5,5,0,2,0,0,0,2,0,0,5,5,0,1
+1,0,5,5,2,0,0,0,2,0,0,0,5,5,0,1
+1,0,5,5,0,0,0,2,0,0,0,2,5,5,0,1
+1,0,5,5,0,0,3,3,3,3,3,0,5,5,2,1
+1,2,5,5,0,2,0,0,0,2,0,0,5,5,0,1
+1,0,0,0,2,0,0,0,2,0,0,0,2,0,0,6
+1,0,0,2,0,0,0,2,0,0,0,0,0,0,0,1
+1,0,2,0,0,0,2,0,0,0,2,0,0,0,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,4,0,2,0,0,0,2,0,0,0,2,4,0,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,2,0,0,0,2,0,0,0,2,0,0,0,2,1
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+NAME Public Records
+PAL 6
+EXT 15,8 1 1,10
+EXT 8,0 5 8,14
+
+ROOM 7
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+1,0,0,2,0,0,0,2,0,0,0,2,0,0,0,1
+1,0,2,0,0,0,2,0,0,0,2,0,0,0,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,0,0,2,3,3,3,3,3,3,3,2,0,0,1
+1,0,0,2,0,0,0,2,7,0,0,2,0,0,0,1
+1,0,2,0,0,0,2,0,7,0,2,0,0,0,2,1
+1,2,0,0,0,2,0,0,0,2,0,0,0,2,0,1
+1,0,0,0,2,0,0,0,7,0,0,0,2,0,0,1
+1,0,0,2,0,0,0,2,7,0,0,2,0,0,0,1
+1,0,2,0,0,0,2,0,7,0,2,0,0,0,2,1
+1,2,0,8,0,8,0,0,7,2,0,8,0,8,0,1
+1,0,0,0,2,0,0,0,7,0,0,0,2,0,0,1
+1,0,0,8,0,8,0,2,7,0,0,8,0,8,0,1
+1,0,2,0,0,0,2,0,7,0,2,0,0,0,2,1
+1,1,1,1,1,1,1,1,6,1,1,1,1,1,1,1
+NAME Budget Hearing
+PAL 7
+EXT 8,15 1 8,1
+
+TIL 1
+11111111
+10000001
+10000001
+11111111
+10001000
+10001000
+10001000
+11111111
+NAME wall
+WAL true
+
+TIL 2
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00010000
+00000000
+NAME floor
+
+TIL 3
+00000000
+11111111
+10000001
+11111111
+10000001
+10000001
+10000001
+00000000
+NAME desk
+WAL true
+
+TIL 4
+00010000
+01010100
+00111000
+00010000
+00111000
+00111000
+00111000
+00000000
+NAME plant
+WAL true
+
+TIL 5
+11111111
+10101001
+11111111
+10010101
+11111111
+10101001
+11111111
+10000001
+NAME shelf
+WAL true
+
+TIL 6
+11111111
+10000001
+10000001
+10000001
+10000001
+10000001
+10000001
+00000000
+NAME door
+
+TIL 7
+00000000
+00000000
+00100100
+00000000
+00000000
+00100100
+00000000
+00000000
+NAME carpet
+
+TIL 8
+00111100
+00100100
+00111100
+00000100
+01111110
+01000010
+01000010
+00000000
+NAME chairtile
+WAL true
+
+TIL 9
+00011000
+00111100
+01111110
+00011000
+00011000
+00011000
+00011000
+00000000
+NAME arrow
+
+SPR A
+00111000
+00111000
+00010000
+01111100
+01010100
+01010100
+00101000
+00101000
+NAME Commissioner Smith
+POS 0 8,12
+
+SPR l
+01111110
+01000010
+01011110
+01000010
+01011110
+01000010
+01111110
+00000000
+NAME Live budget ledger
+DLG ledger
+POS 0 10,5
+
+SPR s
+01111110
+01000010
+01011010
+01000010
+01111110
+00011000
+00011000
+00000000
+NAME Save public money sign
+DLG office_sign
+POS 0 3,3
+
+SPR c
+00111100
+00100100
+00111100
+00000100
+01111110
+01000010
+01000010
+00000000
+NAME Broken office chair
+DLG office_chair
+POS 0 5,9
+
+SPR v
+00111100
+00100100
+00111100
+00011000
+01111110
+01011010
+00100100
+00100100
+NAME Clerk Vale
+DLG hall_guide
+POS 1 7,7
+
+SPR h
+01111110
+01000010
+01011010
+01000010
+01111110
+00011000
+00011000
+00000000
+NAME Hall notice
+DLG hall_sign
+POS 1 10,11
+
+SPR m
+00011000
+00111100
+00011000
+00111100
+01100110
+00111100
+00100100
+00100100
+NAME Ms Vellum
+DLG contractor
+POS 2 8,5
+
+SPR p
+00111100
+00100110
+00100010
+00101010
+00111110
+00101010
+00111110
+00000000
+NAME STAR premium package
+DLG premium
+POS 2 11,9
+
+SPR o
+00111100
+00100110
+00100010
+00111010
+00100010
+00111010
+00111110
+00000000
+NAME PLAIN restore original
+DLG restore
+POS 2 4,9
+
+SPR k
+01111110
+01000010
+01011110
+01000010
+01011110
+01000010
+01111110
+00000000
+NAME Contractor catalogue
+DLG catalogue
+POS 2 3,4
+
+SPR d
+00111100
+01111110
+00100100
+00111100
+01011010
+01111110
+00100100
+01100110
+NAME Senator Doran
+DLG doran_after
+POS 3 8,5
+
+SPR f
+00001000
+00101000
+01111110
+01010110
+01111110
+01010110
+01111110
+00000000
+NAME FACTORY contract
+DLG factory
+POS 3 11,9
+
+SPR j
+01111110
+01000010
+01011010
+01000010
+01111110
+00011000
+00011000
+00000000
+NAME District jobs sign
+DLG doran_sign
+POS 3 3,3
+
+SPR b
+00111000
+01111100
+00101000
+00111000
+01111100
+01010100
+01111100
+01000100
+NAME Senator Bell
+DLG bell_after
+POS 4 8,5
+
+SPR t
+00010000
+00111000
+01111100
+00010000
+01111100
+01010100
+01111100
+00000000
+NAME TRAINING contract
+DLG training
+POS 4 11,9
+
+SPR n
+01111110
+01000010
+01011010
+01000010
+01111110
+00011000
+00011000
+00000000
+NAME Bell center sign
+DLG bell_sign
+POS 4 3,3
+
+SPR q
+00111100
+01111110
+00111100
+00100100
+01111110
+01000010
+00111100
+00100100
+NAME Mr Soft
+DLG broker
+POS 5 8,5
+
+SPR e
+00000000
+01111110
+01100110
+01011010
+01000010
+01000010
+01111110
+00000000
+NAME ENVELOPE accept
+DLG perk
+POS 5 11,9
+
+SPR r
+00000000
+00010000
+00111110
+01110010
+00100010
+00010010
+00001110
+00000000
+NAME RETURN envelope
+DLG refuse
+POS 5 4,9
+
+SPR z
+01111110
+01000010
+01011010
+01000010
+01111110
+00011000
+00011000
+00000000
+NAME Private lounge sign
+DLG private_sign
+POS 5 3,3
+
+SPR a
+00111100
+00100100
+00111100
+00011000
+01111110
+01100110
+00100100
+00100100
+NAME Archivist Moss
+DLG records_clerk
+POS 6 8,5
+
+SPR i
+01111110
+01000010
+01011110
+01000010
+01011110
+01000010
+01111110
+00000000
+NAME Hearing minutes
+DLG records_minutes
+POS 6 4,9
+
+SPR u
+00111100
+00100110
+00100010
+00111010
+00100010
+00111010
+00111110
+00000000
+NAME Public audit sheet
+DLG records_audit
+POS 6 11,9
+
+SPR g
+00111100
+00100100
+00111100
+00011000
+01111110
+01011010
+00100100
+00100100
+NAME Hearing clerk
+DLG hearing_clerk
+POS 7 4,9
+
+SPR x
+00111100
+00100100
+00111100
+00011000
+01111110
+01111110
+00100100
+01100110
+NAME Chairperson Grey
+DLG chairperson
+POS 7 8,3
+
+SPR y
+00011000
+00111100
+00011000
+00011000
+01111110
+01000010
+01111110
+01000010
+NAME SUBMIT podium
+DLG submit
+POS 7 8,7
+
+SPR w
+01111110
+01000010
+01011010
+01000010
+01111110
+00011000
+00011000
+00000000
+NAME Hearing sign
+DLG hearing_sign
+POS 7 12,3
+
+ITM 0
+00111100
+00100110
+00100010
+00111010
+00100010
+00111010
+00111110
+00000000
+NAME Procurement order
+DLG brief
+
+ITM 1
+00111100
+00100110
+00100010
+00111010
+00100010
+00111010
+00111110
+00000000
+NAME Original chair quote
+DLG quote
+
+DLG brief
+"""
+PROCUREMENT ORDER 100 chairs. Total quote: $2000. Instruction: SAVE PUBLIC MONEY.
+{pg}
+You are Commissioner Smith. Obtain both congressional signatures for approval. Or submit the original quote and accept rejection. Your principles are a playable route.
+{pg}
+Take the glowing file by walking over it. Walk into people and upright documents to read. Arrows or WASD to move; Space to advance text. {briefed = 1}
+"""
+NAME brief
+
+DLG quote
+"""
+ORIGINAL QUOTE: 100 ordinary chairs at $20 each. Total $2000. All four legs included.
+{pg}
+Quote acquired. The contractor can keep this price. Congress can make it less popular. No money has changed. {quotes = 1}
+"""
+NAME quote
+
+DLG ledger
+"""
+SMITH / LIVE LEDGER
+Budget: ${say budget}.
+Signatures: {say signatures}/2.
+Factory promise: {say factory}.
+Training center: {say training}.
+{pg}
+Premium chairs: {say premium}.
+Personal cash taken: {say perk}.
+Cash refused: {say refused}.
+Submitted: {say submitted}.
+(Flags: 0 = no, 1 = yes.)
+{pg}
+{
+- signatures == 2 ?
+  READY: two signatures. Current submission leads to B: approval and promotion.
+- else ?
+  {
+  - perk == 1 ?
+    READY, BUT EXPOSED: personal cash and fewer than two signatures. Submission leads to C: you take the blame.
+  - else ?
+    {
+    - budget == 2000 ?
+      READY: original $2000 quote, no personal cash. Submission leads to A: rejection on principle.
+    - else ?
+      NOT READY: amended draft without two signatures. Finish both deals or restore the $2000 original at the contractor.
+    }
+  }
+}
+{pg}
+NEXT: {
+- briefed == 0 ?
+  Collect the task file in this office.
+- else ?
+  {
+  - quotes == 0 ?
+    Visit the contractor: west upper door in the hall. Collect the quote.
+  - else ?
+    Review the hearing clerk before submitting. You can always return here.
+  }
+}
+"""
+NAME ledger
+
+DLG office_sign
+"""
+SAVE EVERY PUBLIC PENNY.
+{pg}
+The frame cost $900. It was a competitive frame.
+"""
+NAME office sign
+
+DLG office_chair
+"""
+Your old chair has three wheels. The missing wheel is classified as an efficiency saving.
+"""
+NAME office chair
+
+DLG hall_guide
+"""
+CLERK VALE: Welcome to the House of Reasonable Additions. The doors are labeled by position.
+{pg}
+NORTH: hearing. SOUTH: your office. WEST upper: contractor. WEST lower: public records. EAST upper: Doran. EAST lower: Bell.
+{pg}
+Get the task file, then the contractor quote. Read each offer before confirming. One signature per senator; two are needed for approval.
+{pg}
+With no cash taken, the original $2000 draft can still be submitted for a complete principled ending. A half-amended draft must be completed or restored.
+"""
+NAME hall guide
+
+DLG hall_sign
+"""
+PLEASE DO NOT RUN. Sudden movement may be mistaken for reform.
+"""
+NAME hall sign
+
+DLG contractor
+"""
+MS. VELLUM / CONTRACTOR: The ordinary chair supports a person. Our Strategic Personnel Support Platform supports a procurement narrative.
+{pg}
+The premium package adds $8000, making the chair subtotal $10000. It buys no votes. My margin does improve, which I call resilience.
+{pg}
+The STAR document adopts the package. The PLAIN document restores the original draft and withdraws ALL amendments and signatures. Read, then bump the same document again to confirm.
+{pg}
+The glowing loose paper is the original quote. Please collect it. Even the cheap version comes with paperwork.
+"""
+NAME contractor
+
+DLG catalogue
+"""
+CATALOGUE A: chair, $20. CATALOGUE B: Strategic Personnel Support Platform, $100 per unit.
+{pg}
+Both use the same screws. The second screws are called a multi-stakeholder fastening solution.
+"""
+NAME catalogue
+
+DLG doran
+"""
+SENATOR DORAN: I oppose wasteful spending. But have you considered jobs in my district?
+{pg}
+Use our district factory: add $6000. You get my signature immediately. No premium chair package required.
+{pg}
+The FACTORY document beside me is the offer. First bump: preview. Second bump: sign. One factory promise, one signature, one invoice.
+{pg}
+I am not selling my vote. I am delivering it locally.
+"""
+NAME doran
+
+DLG doran_after
+"""
+{
+- factory == 1 ?
+  DORAN: My district is delighted. Your ${say budget} proposal demonstrates thrift across a wider geographic area.
+- else ?
+  SENATOR DORAN: I oppose wasteful spending. But have you considered jobs in my district?
+  {pg}
+  Use our district factory: add $6000. You get my signature immediately. No premium chair package required.
+  {pg}
+  The FACTORY document beside me is the offer. First bump: preview. Second bump: sign. One factory promise, one signature, one invoice.
+  {pg}
+  I am not selling my vote. I am delivering it locally.
+}
+"""
+NAME doran after
+
+DLG doran_sign
+"""
+LOCAL JOBS FIRST. Public value can be measured in ribbon length.
+"""
+NAME doran sign
+
+DLG bell
+"""
+SENATOR BELL: A chair without training is merely a sitting risk.
+{pg}
+Add a National Seating Readiness Center: $24000. My signature follows. It includes an opening ceremony and a ceremonial opening.
+{pg}
+Use the TRAINING document beside me. Read the preview, then bump it again to confirm. A factory deal is separate.
+{pg}
+The center shall bear my name. For accountability, obviously.
+"""
+NAME bell
+
+DLG bell_after
+"""
+{
+- training == 1 ?
+  BELL: My name will be very visible. This is what transparency looks like on a building.
+- else ?
+  SENATOR BELL: A chair without training is merely a sitting risk.
+  {pg}
+  Add a National Seating Readiness Center: $24000. My signature follows. It includes an opening ceremony and a ceremonial opening.
+  {pg}
+  Use the TRAINING document beside me. Read the preview, then bump it again to confirm. A factory deal is separate.
+  {pg}
+  The center shall bear my name. For accountability, obviously.
+}
+"""
+NAME bell after
+
+DLG bell_sign
+"""
+THE BELL CENTER FOR SITTING EXCELLENCE. Grand opening: before any chairs arrive.
+"""
+NAME bell sign
+
+DLG records_clerk
+"""
+ARCHIVIST MOSS: I keep records. They keep telling me this is an attitude problem.
+{pg}
+The district amendment adds $6000; the training amendment adds $24000. Two signatures pass the bill. A premium package alone passes nothing.
+{pg}
+An unamended $2000 draft with no personal cash can lose honorably. If you take cash and lack two signatures, the committee will discover ethics at your expense.
+{pg}
+The north door is the private lounge. Read every warning. You never need to enter it to finish.
+"""
+NAME records clerk
+
+DLG records_minutes
+"""
+MINUTES OF LAST HEARING: Everyone agreed the budget was excessive. Everyone requested an addition.
+{pg}
+MOTION: To express grave concern about the motion we just approved. Carried unanimously.
+"""
+NAME records minutes
+
+DLG records_audit
+"""
+PUBLIC AUDIT FORM
+100 chairs: $2000.
+Premium package: +$8000.
+District factory: +$6000.
+Training center: +$24000.
+{pg}
+Two amendments alone total $32000. With the premium package: $40000. Personal envelope: $500 cash to Smith; it adds nothing to the public budget or vote count.
+{pg}
+Restoring the original quote revokes both signatures and removes every public amendment. It cannot erase personal cash already accepted.
+"""
+NAME records audit
+
+DLG broker
+"""
+MR. SOFT / LIAISON: This is not a bribe. It is a small, unbudgeted thank-you from the Friends of Better Seating.
+{pg}
+The envelope gives you $500 personally. It does NOT change the public budget and buys NO signatures. Once taken, it cannot be returned.
+{pg}
+With fewer than two signatures, submit and they will blame you. With both signatures, the coalition passes the budget anyway.
+{pg}
+ENVELOPE accepts. RETURN refuses permanently. First bump previews; second bump confirms. Leaving without either is also a choice.
+"""
+NAME broker
+
+DLG private_sign
+"""
+NO MINUTES ARE TAKEN HERE. Some hours are taken instead.
+"""
+NAME private sign
+
+DLG hearing_clerk
+"""
+HEARING CLERK: Current public budget: ${say budget}. Signatures: {say signatures}/2. Personal cash: {say perk}.
+{pg}
+{
+- signatures == 2 ?
+  READY: two signatures. Current submission leads to B: approval and promotion.
+- else ?
+  {
+  - perk == 1 ?
+    READY, BUT EXPOSED: personal cash and fewer than two signatures. Submission leads to C: you take the blame.
+  - else ?
+    {
+    - budget == 2000 ?
+      READY: original $2000 quote, no personal cash. Submission leads to A: rejection on principle.
+    - else ?
+      NOT READY: amended draft without two signatures. Finish both deals or restore the $2000 original at the contractor.
+    }
+  }
+}
+{pg}
+Go to the large SUBMIT document on the central podium. It previews your exact outcome first. Bump it again to confirm. You can leave before confirmation.
+{pg}
+RESTORE ORIGINAL is at the contractor. It revokes promises and signatures, removes public extras, and keeps any personal cash on record.
+"""
+NAME hearing clerk
+
+DLG chairperson
+"""
+CHAIRPERSON GREY: We will now consider whether your request demonstrates fiscal responsibility.
+{pg}
+For this purpose, fiscal responsibility means having enough people who agree with the request.
+{pg}
+The podium document submits. The door remains open. A closed door would require a separate facilities appropriation.
+"""
+NAME chairperson
+
+DLG hearing_sign
+"""
+HEARING ON RESTRAINT. Sponsored by the Committee for Expanded Restraint.
+"""
+NAME hearing sign
+
+DLG gate_brief
+"""
+{
+- briefed == 1 ?
+  {property locked false}
+- else ?
+  Collect the glowing procurement file before leaving. It contains the instruction to save public money. {property locked true}
+}
+"""
+NAME gate brief
+
+DLG gate_quote
+"""
+{
+- quotes == 1 ?
+  {property locked false}
+- else ?
+  CLERK VALE: Please collect the original quote from the contractor first. WEST upper door. {property locked true}
+}
+"""
+NAME gate quote
+
+DLG premium
+"""
+{
+- quotes == 1 ?
+  {
+  - premium == 1 ?
+    Already adopted. No second charge. Restore the original draft to remove this package.
+  - else ?
+    {
+    - pending == 1 ?
+      {budget = budget + 8000}{premium = 1}ADOPTED. Strategic platforms ordered. Public budget: ${say budget}. No new signature.{pending = 0}
+    - else ?
+      PREVIEW / PREMIUM PACKAGE
+      Public cost: +$8000. Votes: +0. New total: ${say {budget + 8000}}.
+      {pg}
+      Bump this STAR document again to adopt. To cancel, leave it and choose another document. No charge yet.{pending = 1}
+    }
+  }
+- else ?
+  Collect the contractor quote before signing anything. No change made.
+}
+"""
+NAME premium
+
+DLG factory
+"""
+{
+- quotes == 1 ?
+  {
+  - factory == 1 ?
+    Factory already promised. Doran already signed. No duplicate fee or signature.
+  - else ?
+    {
+    - pending == 2 ?
+      {budget = budget + 6000}{factory = 1}{signatures = signatures + 1}SIGNED: Doran. Public budget: ${say budget}. Signatures: {say signatures}/2.{pending = 0}
+    - else ?
+      PREVIEW / DISTRICT FACTORY
+      Public cost: +$6000. Doran signs. New total: ${say {budget + 6000}}.
+      {pg}
+      Bump the FACTORY document again to confirm. No charge or signature yet.{pending = 2}
+    }
+  }
+- else ?
+  Collect the contractor quote before signing anything. No change made.
+}
+"""
+NAME factory
+
+DLG training
+"""
+{
+- quotes == 1 ?
+  {
+  - training == 1 ?
+    Center already promised. Bell already signed. No duplicate fee or signature.
+  - else ?
+    {
+    - pending == 3 ?
+      {budget = budget + 24000}{training = 1}{signatures = signatures + 1}SIGNED: Bell. Public budget: ${say budget}. Signatures: {say signatures}/2.{pending = 0}
+    - else ?
+      PREVIEW / TRAINING CENTER
+      Public cost: +$24000. Bell signs. New total: ${say {budget + 24000}}.
+      {pg}
+      Bump the TRAINING document again to confirm. No charge or signature yet.{pending = 3}
+    }
+  }
+- else ?
+  Collect the contractor quote before signing anything. No change made.
+}
+"""
+NAME training
+
+DLG perk
+"""
+{
+- refused == 1 ?
+  The envelope was returned. Mr. Soft does not believe in second impressions.
+- else ?
+  {
+  - quotes == 1 ?
+    {
+    - perk == 1 ?
+      The envelope is already in your pocket. It cannot be returned. No second envelope.
+    - else ?
+      {
+      - pending == 4 ?
+        {perk = 1}ACCEPTED: $500 personal cash. No votes gained. Mr. Soft has suddenly forgotten your surname.{pending = 0}
+      - else ?
+        PREVIEW / PERSONAL ENVELOPE
+        Smith receives $500. Public budget and votes do not change. This cannot be undone.
+        {pg}
+        If you submit with fewer than two signatures, ending C follows. With both signatures, ending B follows.
+        {pg}
+        Bump the ENVELOPE again to accept. The RETURN document refuses permanently. No cash taken yet.{pending = 4}
+      }
+    }
+  - else ?
+    Collect the contractor quote before signing anything. No change made.
+  }
+}
+"""
+NAME perk
+
+DLG refuse
+"""
+{
+- perk == 1 ?
+  The cash was already accepted. Returning the paper envelope cannot undo it.
+- else ?
+  {
+  - refused == 1 ?
+    Already refused. No cash was taken.
+  - else ?
+    {
+    - pending == 7 ?
+      {refused = 1}{pending = 0}RETURNED. No personal cash. This offer is now closed.
+    - else ?
+      PREVIEW / RETURN ENVELOPE
+      Refuse the $500 permanently. Budget and signatures stay the same.
+      {pg}
+      Bump RETURN again to confirm. No change yet. {pending = 7}
+    }
+  }
+}
+"""
+NAME refuse
+
+DLG restore
+"""
+{
+- quotes == 1 ?
+  {
+  - pending == 5 ?
+    {budget = 2000}{premium = 0}{factory = 0}{training = 0}{signatures = 0}{pending = 0}RESTORED: $2000 for 100 ordinary chairs. All public extras and both signatures withdrawn. Personal cash record: {say perk}.
+  - else ?
+    PREVIEW / RESTORE ORIGINAL
+    Set public budget to $2000. Remove premium package, factory promise, training center AND both signatures.
+    {pg}
+    Personal cash, if accepted, stays on your record. This does not undo that choice.
+    {pg}
+    Bump this PLAIN document again to confirm. No changes yet. {pending = 5}
+  }
+- else ?
+  Collect the original quote first. No change made.
+}
+"""
+NAME restore
+
+DLG submit
+"""
+{
+- submitted == 1 ?
+  Already submitted. Restart to play another route.
+- else ?
+  {
+  - quotes == 1 ?
+    {
+    - pending == 6 ?
+      {
+      - signatures == 2 ?
+        {submitted = 1}{ending = "B"}{end}B / COLLECTIVE PROGRESS
+        Budget approved: ${say budget}. Both senators signed.
+        {pg}
+        Doran praises local jobs. Bell schedules a ribbon. Ms. Vellum orders a larger calculator.
+        {pg}
+        {
+        - perk == 1 ?
+          The envelope is listed under coalition maintenance. The ethics folder is sealed.
+        - else ?
+          Your pockets are empty. Your amended budget is not.
+        }
+        {pg}
+        Smith was promoted. The chairs have not arrived.
+      - else ?
+        {
+        - perk == 1 ?
+          {submitted = 1}{ending = "C"}{end}C / THE FALL GUY
+          Public budget: ${say budget}. Signatures: {say signatures}/2. Personal cash: $500.
+          {pg}
+          Doran: I never authorized this conduct. Bell: Where was the oversight? Mr. Soft has never heard of you.
+          {pg}
+          Everyone suddenly cares about public spending.
+        - else ?
+          {
+          - budget == 2000 ?
+            {submitted = 1}{ending = "A"}{end}A / AN HONEST REJECTION
+            100 chairs. $2000. No amendments. No personal cash.
+            {pg}
+            The committee rejects the budget. No district factory. No training center. No reason to applaud.
+            {pg}
+            Performance review: diligent, but lacks coordination skills.
+          - else ?
+            {pending = 0}NOT SUBMITTED. Your amended draft lacks two signatures. Complete both deals or restore the original at the contractor. You can leave and return.
+          }
+        }
+      }
+    - else ?
+      SUBMISSION PREVIEW
+      Public budget: ${say budget}. Signatures: {say signatures}/2. Personal cash taken: {say perk}.
+      {pg}
+      {
+      - signatures == 2 ?
+        READY: two signatures. Current submission leads to B: approval and promotion.
+      - else ?
+        {
+        - perk == 1 ?
+          READY, BUT EXPOSED: personal cash and fewer than two signatures. Submission leads to C: you take the blame.
+        - else ?
+          {
+          - budget == 2000 ?
+            READY: original $2000 quote, no personal cash. Submission leads to A: rejection on principle.
+          - else ?
+            NOT READY: amended draft without two signatures. Finish both deals or restore the $2000 original at the contractor.
+          }
+        }
+      }
+      {pg}
+      Bump SUBMIT again to finalize. The result then becomes an ending. To change plans, leave and confirm a different document. Nothing submitted yet. {pending = 6}
+    }
+  - else ?
+    Collect the task file and the original quote first. Nothing submitted.
+  }
+}
+"""
+NAME submit
+
+VAR budget
+2000
+
+VAR factory
+0
+
+VAR training
+0
+
+VAR premium
+0
+
+VAR perk
+0
+
+VAR refused
+0
+
+VAR submitted
+0
+
+VAR ending
+none
+
+VAR pending
+0
+
+VAR briefed
+0
+
+VAR quotes
+0
+
+VAR signatures
+0
